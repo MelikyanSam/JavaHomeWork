@@ -1,14 +1,14 @@
 package com.company.HomeWork.Work7;
 
-public class Constructor {
+public class Stack {
     int stck [] ;
     int tos;
 
-    Constructor(int num){
+    Stack(int num){
         stck = new int[num];
         tos = -1;
     }
-    Constructor(){
+    Stack(){
         stck = new int[10];
         tos = -1;
     }
@@ -30,9 +30,9 @@ public class Constructor {
     }
 
     public static void main(String[] args) {
-        Constructor myStack = new Constructor(100);
-        Constructor myStack1 = new Constructor(46);
-        Constructor myStack2 = new Constructor();
+        Stack myStack = new Stack(100);
+        Stack myStack1 = new Stack(46);
+        Stack myStack2 = new Stack();
 
 
         for(int i = 1; i < myStack.stck.length; i++){
