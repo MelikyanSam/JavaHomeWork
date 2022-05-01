@@ -11,6 +11,11 @@ class Triangle{
     int perimeter(){
         return sideA + sideB + sideC;
     }
+    void setTri(int a, int b,int c){
+        sideA = a;
+        sideB = b;
+        sideC = c;
+    }
 
 }
 public class CWork5 {
@@ -18,12 +23,15 @@ public class CWork5 {
         Triangle t = new Triangle();
 
         Triangle $3 = new Triangle();
-        $3.sideA = 10;
-        $3.sideB = 10;
-        $3.sideC = 7;
+        $3.setTri(20,30, 4);
+//        $3.sideA = 10;
+//        $3.sideB = 10;
+//        $3.sideC = 7;
         System.out.println($3.perimeter() + " perimeter of '$3' triangle");
 
-        Box myBox = new Box();
+
+
+        CWork6 myBox = new CWork6();
 
         myBox.width = 2;
         myBox.height = 2;
@@ -34,8 +42,8 @@ public class CWork5 {
 //        System.out.println(myBox.width);
 //        System.out.println(myBox.depth);
 
-        Box b1 = new Box();
-        Box b2 = b1;
+        CWork6 b1 = new CWork6();
+        CWork6 b2 = b1;
         b1 = null;
 //        b2.height = 2;
 

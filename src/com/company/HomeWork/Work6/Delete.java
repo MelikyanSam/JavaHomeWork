@@ -30,6 +30,7 @@ public class Delete {
     public static void main(String[] args) {
         int array[] = {5, 8, 12, 30, 2, 10 };
 
+
         array = delete(array, 30);
 
         for (int i = 0; i< array.length; i++){
