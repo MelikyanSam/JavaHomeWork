@@ -18,7 +18,7 @@ public class Main {
         one.add(2,98);
 
 //        one.add(5,two);
-        one.add(2,two.getArr());
+//        one.add(2,two.getArr());
 
 //        one.add(two.getArr());
 

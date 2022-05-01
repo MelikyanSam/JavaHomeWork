@@ -64,24 +64,6 @@ public class DynamicArray {
         return arr = a;
     }
 
-//    int[] add( int e, int capacity){
-//        if(this.capacity == len)
-//            this.capacity += capacity;
-//
-//        int[] a = new int[capacity +1] ;
-//
-//        for(int i = 0; i < capacity; i++){
-//
-//            if(i == len ) {
-//                a[i] = e;
-//                break;
-//            }
-//                a[i] = arr[i];
-//        }
-//        len++;
-//        return arr = a;
-//    }
-
     int[] add(int p, int e) {
         if (capacity == len)
             capacity += 10;
