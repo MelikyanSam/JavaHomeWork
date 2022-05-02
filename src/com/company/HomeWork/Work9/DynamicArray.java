@@ -1,26 +1,28 @@
 package com.company.HomeWork.Work9;
 
 public class DynamicArray {
-    private int capacity;
-    private int len;
-    private int[] arr;
+    public int capacity;
+    public int len;
+    public int[] arr;
 
     //   Constructors
 
     DynamicArray() {
         capacity = 10;
         arr = new int[capacity];
+        len = getLen();
     }
 
     DynamicArray(int num) {
         capacity = num;
         arr = new int[capacity];
+        len = getLen();
     }
 
 
     // Methods
 
-    int getLen() {
+    private int getLen() {
         len = 0;
         for (int i = 0; i < capacity; i++) {
             if (arr[i] != 0)
@@ -29,33 +31,32 @@ public class DynamicArray {
         return len;
     }
 
-    int getCapacity() {
+    protected int getCapacity() {
         return capacity;
     }
 
-    int[] getArr() {
+    protected int[] getArr() {
         return arr;
     }
 
-    int getArr(int num) {
+    protected int getArr(int num) {
         return arr[num];
     }
 
-    void swap(int a, int b) {
+    protected void swap(int a, int b) {
         int c = arr[a];
         arr[a] = arr[b];
         arr[b] = c;
     }
 
-    int[] add(int e) {
+    protected int[] add(int e) {
         if (capacity == len)
             capacity += 10;
         int[] a = new int[capacity + 1];
 
         for (int i = 0; i < capacity; i++) {
-
             if (i == len) {
-                a[i] = e;
+                a[len] = e;
                 break;
             }
             a[i] = arr[i];
@@ -64,7 +65,7 @@ public class DynamicArray {
         return arr = a;
     }
 
-    int[] add(int p, int e) {
+    protected int[] add(int p, int e) {
         if (capacity == len)
             capacity += 10;
 
@@ -83,7 +84,7 @@ public class DynamicArray {
         return arr = a;
     }
 
-    int[] add(DynamicArray e) {
+    protected int[] add(DynamicArray e) {
         capacity = len + e.capacity;
         int[] a = new int[capacity];
 
@@ -100,7 +101,7 @@ public class DynamicArray {
         return arr = a;
     }
 
-    int[] add(int p, DynamicArray e) {
+    protected int[] add(int p, DynamicArray e) {
         capacity = len + e.capacity;
         int le = len + e.getLen();
         int[] a = new int[capacity];
@@ -131,7 +132,7 @@ public class DynamicArray {
         return arr = a;
     }
 
-    int[] add(int[] e) {
+    protected int[] add(int[] e) {
         capacity = len + e.length;
         int[] a = new int[capacity];
 
@@ -147,7 +148,7 @@ public class DynamicArray {
         }
         return arr = a;
     }
-    int[] add(int p, int[] e) {
+    protected int[] add(int p, int[] e) {
         capacity = len + e.length;
         int[] a = new int[capacity];
         int l = 0;
@@ -180,17 +181,17 @@ public class DynamicArray {
         return arr = a;
     }
 
-    int[] removeByIndex(int e) {
-        int a[] = new int[capacity];
+    protected int[] removeByIndex(int e) {
         for (int i = 0; i < len; i++) {
             if (i >= e) {
                 arr[i] = arr[i + 1];
             }
         }
+        len--;
         return arr;
     }
 
-    int[] removeByValue(int e) {
+    protected int[] removeByValue(int e) {
         int inx = -1;
         for (int i = 0; i < len; i++) {
             if (arr[i] == e)
@@ -200,7 +201,7 @@ public class DynamicArray {
         return arr;
     }
 
-    int indexOf(int e) {
+    protected int indexOf(int e) {
         int inx = -1;
         for (int i = 0; i < len; i++) {
             if (arr[i] == e)
@@ -209,7 +210,7 @@ public class DynamicArray {
         return inx;
     }
 
-    int lastIndexOf(int e) {
+    protected int lastIndexOf(int e) {
         int inx = -1;
         for (int i = 0; i < len; i++) {
             if (arr[i] == e)
@@ -218,7 +219,7 @@ public class DynamicArray {
         return len - (inx + 1);
     }
 
-    int[] sort() {
+    protected int[] sort() {
         int z = arr[0];
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len; j++) {
@@ -232,7 +233,7 @@ public class DynamicArray {
         return arr;
     }
 
-    int[] sort(int n) {
+    protected int[] sort(int n) {
         int z;
         for (int i = 0; i < len; i++) {
             z = arr[i];
@@ -246,7 +247,7 @@ public class DynamicArray {
         return arr;
     }
 
-    boolean contains(int e) {
+    protected boolean contains(int e) {
         boolean a = false;
         for (int i = 0; i < len; i ++){
             if(arr[i] == e)

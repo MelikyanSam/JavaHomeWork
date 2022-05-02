@@ -15,7 +15,7 @@ public class Main {
         two.add(202);
         two.add(30);
 
-        one.add(2,98);
+        one.add(2, 98);
 
 //        one.add(5,two);
 //        one.add(2,two.getArr());
@@ -31,13 +31,13 @@ public class Main {
 //        one.sort();
 //        one.sort(1);
 
-
-        for(int i = 0; i < one.getCapacity(); i++){
+//        one.removeByValue(102);
+        for (int i = 0; i < one.getCapacity(); i++) {
             System.out.println(one.getArr(i));
         }
         System.out.println("-------------------------");
         System.out.println(one.getCapacity());
-        System.out.println(one.getLen());
+        System.out.println(one.len);
 
 //        System.out.println(one.contains(200));
     }
