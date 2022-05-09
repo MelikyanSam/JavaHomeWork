@@ -1,4 +1,4 @@
-package com.company.HomeWork.Work9;
+package com.company.dyanamicArray;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,15 +10,29 @@ public class Main {
         one.add(102);
         one.add(62);
         one.add(1082);
+//        one.add(12);
+//        one.add(102);
+//        one.add(62);
+//        one.add(1082);
+//        one.add(12);
+//        one.add(102);
+//        one.add(62);
+//        one.add(1082);
 
         two.add(451);
         two.add(202);
         two.add(30);
 
         one.add(2, 98);
+//        one.add(8, 898);
 
-//        one.add(5,two);
-//        one.add(2,two.getArr());
+//        one.add(two);
+//        one.add(two);
+
+//        one.add(1,two);
+//        one.add(9,two.getArr());
+
+//        one.add(two);
 
 //        one.add(two.getArr());
 
